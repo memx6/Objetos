@@ -1,0 +1,21 @@
+import SueldoPepe.*
+
+test "Liquidacion de sueldo Pepe" {
+	
+	pepeS.categoria(gerente)
+	pepeS.presentismo(normal)
+	pepeS.sindicato(comprometido)
+	assert.equals(13350, pepeS.sueldo())
+
+}
+
+test "Liquidacion de Roque" {
+	
+	pepeS.categoria(gerente)
+	pepeS.presentismo(normal)
+	pepeS.sindicato(comprometido)
+	roque.sindicato(comprometido)
+	ernesto.companiero(pepeS)
+	ernesto.presentismo(ajuste)
+	assert.equals(roque.sueldo() , ernesto.sueldo())
+}

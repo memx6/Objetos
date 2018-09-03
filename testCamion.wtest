@@ -1,0 +1,38 @@
+import camionesDeTransporte.*
+test "Paquete De ladrillo" {
+     paqueteDeLadrillos.agregarLadrillo(ladrillo) 
+     paqueteDeLadrillos.agregarLadrillo(ladrillo) 
+     paqueteDeLadrillos.agregarLadrillo(ladrillo)
+     paqueteDeLadrillos.agregarLadrillo(ladrillo) 
+     paqueteDeLadrillos.agregarLadrillo(ladrillo)  
+     paqueteDeLadrillos.agregarLadrillo(ladrillo)
+     paqueteDeLadrillos.agregarLadrillo(ladrillo) 
+     paqueteDeLadrillos.agregarLadrillo(ladrillo) 
+     paqueteDeLadrillos.agregarLadrillo(ladrillo)
+     paqueteDeLadrillos.agregarLadrillo(ladrillo) 
+     paqueteDeLadrillos.agregarLadrillo(ladrillo)  
+     paqueteDeLadrillos.agregarLadrillo(ladrillo)
+     paqueteDeLadrillos.agregarLadrillo(ladrillo) 
+     paqueteDeLadrillos.agregarLadrillo(ladrillo) 
+     paqueteDeLadrillos.agregarLadrillo(ladrillo)
+     paqueteDeLadrillos.agregarLadrillo(ladrillo) 
+     paqueteDeLadrillos.agregarLadrillo(ladrillo)  
+     paqueteDeLadrillos.agregarLadrillo(ladrillo)
+   // la carga de ladrillos la hice de 19 ladrillos y no 30 para no hacer tan extenso el test
+}
+
+test "Armado de Contenedor Portuario"{
+	  contenedorPortuario.cosaACargar(knightRider)
+	 contenedorPortuario.cosaACargar(bumblebee)
+	  bateriaAntiaerea.agregarMisil(misil)
+	  contenedorPortuario.cosaACargar(bateriaAntiaerea)
+	  residuosRadioactivos.darPeso(500)
+	  embalajeDeSeguridad.cosa(residuosRadioactivos)
+	  contenedorPortuario.cosaACargar(embalajeDeSeguridad)
+	 }
+
+test "Carga de Camion"{
+	 camion.cargar(paqueteDeLadrillos)
+     camion.cargar(contenedorPortuario)
+     camion.excedidoDePeso()
+}

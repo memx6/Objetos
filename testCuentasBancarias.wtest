@@ -1,0 +1,16 @@
+import cuentasBancarias9.*
+
+test "cuentasBancarias" {
+
+	pepe.depositar (8000)
+	julian.depositar (1500)
+	papa.depositar (45300)
+	
+	cuentaCombinada.primaria(pepe)
+	cuentaCombinada.secundaria(julian)
+	casa.cuentas(cuentaCombinada)
+	casa.comprar(plancha)
+	casa.comprar(cama)
+	assert.equals(10790, casa.cuentaParaGastos().saldo())
+
+}

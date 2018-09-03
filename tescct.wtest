@@ -1,0 +1,23 @@
+import pepita.*
+
+test "pepita comer 100 gramos" {
+
+	pepita.comer(100)
+	assert.equals(400, pepita.energia())
+	pepita.comer(50)
+	assert.equals(600, pepita.energia())
+
+}
+
+test "pepita vuela 50km"{
+	
+	pepita.comer(100)
+	pepita.volar(50)
+	assert.equals(340, pepita.energia())
+}
+
+test "pepita no puede volar si no tiene energia"{
+	
+	assert.throwsException ({=>pepita.volar(100)})
+	
+}
